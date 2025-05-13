@@ -128,7 +128,17 @@ def run_code_review(code: str):
 
 # --- Streamlit UI ---
 st.title("🧠 AI Code Review Crew")
+def hide_streamlit_style():
+    hide_st_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        header {visibility: hidden;}
+        </style>
+    """
+    st.markdown(hide_st_style, unsafe_allow_html=True)
 
+hide_streamlit_style()
 code = st.text_area("Paste your code here:", height=300)
 
 if st.button("🔍 Run Code Review"):
