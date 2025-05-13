@@ -1,5 +1,5 @@
 streamlit
 openai
-crewai
+crewai==0.22.1
 langchain
 langchain_community
